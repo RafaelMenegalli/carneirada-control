@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import styles from "./styles.module.scss"
 import { Button, Input, Modal, Toggle } from "rsuite";
 import type { CategoryType } from "../../utils/types/CategoryType";
@@ -14,6 +14,12 @@ export default function EditCategoryModal({ open, setOpen, data }: EditCategoryM
     const [description, setDescription] = useState<string>(data.description)
     const [active, setActive] = useState<boolean>(data.active)
 
+    useEffect(() => {
+        setName(data.name)
+        setDescription(data.description)
+        setActive(data.active)
+    }, [data])
+
     const handleClose = () => {
         setOpen(false)
     }
@@ -22,7 +28,7 @@ export default function EditCategoryModal({ open, setOpen, data }: EditCategoryM
         <>
             <Modal size="lg" open={open} onClose={handleClose}>
                 <Modal.Header>
-                    <Modal.Title>Editando Categoria: { }</Modal.Title>
+                    <Modal.Title>Editando Categoria - <strong>{data.name}</strong></Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <div className={styles.form}>

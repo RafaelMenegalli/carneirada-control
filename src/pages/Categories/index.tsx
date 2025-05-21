@@ -13,22 +13,22 @@ import EditCategoryModal from '../../components/EditCategoryModal';
 const { Cell, Column, HeaderCell } = Table;
 
 const defaultData: CategoryType[] = [
-    { id: 1, name: "Carnes", description: "", active: true },
-    { id: 1, name: "Carnes", description: "", active: false },
-    { id: 1, name: "Carnes", description: "", active: false },
-    { id: 1, name: "Carnes", description: "", active: true },
-    { id: 1, name: "Carnes", description: "", active: true },
-    { id: 1, name: "Carnes", description: "", active: true },
-    { id: 1, name: "Carnes", description: "", active: true },
-    { id: 1, name: "Carnes", description: "", active: true },
-    { id: 1, name: "Carnes", description: "", active: true },
-    { id: 1, name: "Carnes", description: "", active: true },
-    { id: 1, name: "Carnes", description: "", active: true },
-    { id: 1, name: "Carnes", description: "", active: true },
-    { id: 1, name: "Carnes", description: "", active: true },
-    { id: 1, name: "Carnes", description: "", active: true },
-    { id: 1, name: "Carnes", description: "", active: true },
-]
+    { id: 1, name: "Carnes", description: "Produtos de origem animal", active: true },
+    { id: 2, name: "Bebidas", description: "Sucos, refrigerantes e bebidas alcoólicas", active: false },
+    { id: 3, name: "Hortifruti", description: "Frutas e verduras frescas", active: true },
+    { id: 4, name: "Padaria", description: "Pães, bolos e salgados", active: true },
+    { id: 5, name: "Limpeza", description: "Produtos de limpeza doméstica", active: false },
+    { id: 6, name: "Higiene", description: "Produtos de higiene pessoal", active: true },
+    { id: 7, name: "Congelados", description: "Alimentos congelados prontos para o consumo", active: true },
+    { id: 8, name: "Pet Shop", description: "Produtos para animais de estimação", active: false },
+    { id: 9, name: "Cereais", description: "Grãos e alimentos secos", active: true },
+    { id: 10, name: "Laticínios", description: "Leite, queijos e derivados", active: true },
+    { id: 11, name: "Doces", description: "Balas, chocolates e sobremesas", active: true },
+    { id: 12, name: "Utilidades", description: "Utensílios domésticos", active: true },
+    { id: 13, name: "Papelaria", description: "Materiais de escritório e papelaria", active: false },
+    { id: 14, name: "Eletrônicos", description: "Pequenos aparelhos eletrônicos", active: true },
+    { id: 15, name: "Automotivo", description: "Produtos para carros e motos", active: true },
+];
 
 export default function Categories() {
     const [addModalVisible, setAddModalVisible] = useState<boolean>(false)
