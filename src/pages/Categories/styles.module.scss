@@ -1,0 +1,23 @@
+.actionBar {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+    .filters {
+        width: 100%;
+    }
+}
+
+.editIcon {
+    cursor: pointer;
+    transition: .2s;
+    font-size: 1rem;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.searchInput {
+    width: 100%;
+}
